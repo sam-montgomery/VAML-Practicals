@@ -21,7 +21,7 @@ if max(labels)<2
     % Calculate the support vectors
     [xsup,w,w0,pos,tps,alpha] = svmclass(images,labels,C,lambda,kernel,kerneloption,1); 
 
-    % create a structure encapsulating all teh variables composing the model
+    % create a structure encapsulating all the variables composing the model
     model.xsup = xsup;
     model.w = w;
     model.w0 = w0;
