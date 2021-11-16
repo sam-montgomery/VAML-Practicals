@@ -41,22 +41,23 @@ for r=1:samplingX:size(I,1)
         
         % we convert it into doubles from 0 to 1 and invert them (rememebr that in the training set, the digitd were white on black background)
         %////////////To be completed at STEP 3 \\\\\\\\\\\\
-        digitIm = 1 - double(digitIm)/255;
-
+        digitIm = double
         %All training examples were 28x28. To have any chance, we need to
         %resample them into a 28x28 imaGE
         %////////////To be completed at STEP 3 \\\\\\\\\\\\
-        digitIm = imresize(digitIm, [28 28]);
-        imshow(digitIm);
+        resizeIm = imresize(digitIm, [28 28]);
+        imshow(resizeIm);
         %We display teh individually segmented digits
         subplot(numberRows,numberColumns,digitCounter)
         imshow(digitIm)
         
         %we reshape the digit into a vector
         %////////////To be completed at STEP 3 \\\\\\\\\\\\  
-        digitIm = reshape(digitIm, 1, []);        
-        prediction =  SVMTesting(digitIm, modelSVM);        
-        predictedRow=[predictedRow prediction];
+        
+        
+        %prediction =  %////////////To be completed at STEP 2 \\\\\\\\\\\\  
+        
+        %predictedRow=[predictedRow prediction];
         end
     end
     
