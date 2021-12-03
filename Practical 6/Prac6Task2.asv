@@ -1,0 +1,2 @@
+[images, labels] = loadPedestrianDatabase('pedestrian_train.cdataset');
+
